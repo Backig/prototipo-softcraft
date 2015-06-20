@@ -3,6 +3,7 @@ Thumbs.db
 .idea
 node_modules
 app/bower_components
+app/dist
 _backups
 .sass-cache
 app/assets/css/materialism.css
