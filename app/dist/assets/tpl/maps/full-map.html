@@ -2,6 +2,12 @@
 
   <ui-gmap-google-map center="map.center"
                       zoom="map.zoom"
-                      control="map.control" />
+                      control="map.control"
+                      mark-click="true"
+                      ng-click="createMarker()">
+
+      <ui-gmap-markers models="markers" coords="'self'" icon="'icon'"></ui-gmap-markers>
+
+  </ui-gmap-google-map>
 
 </section>
