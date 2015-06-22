@@ -25,7 +25,7 @@ app.controller('FullMapController', ['$scope', '$rootScope', 'uiGmapIsReady', fu
    alert("hello");
 
       idMarker = idMarker + 1;
-  }
+  };
 
 
   $scope.markers = markers;

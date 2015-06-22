@@ -1,0 +1,80 @@
+<section class="charts" ng-controller="ChartsController">
+
+  <div class="page-header">
+    <h1>
+      <i class="md md-insert-chart"></i>
+      Denuncias por proveedor.
+    </h1>
+  </div>
+
+  <div class="row">
+
+
+
+    <div class="col-sm-12 col-md-12">
+      <div class="card line-chart small">
+        <div class="card-header">
+          <div class="card-title">Denuncias del ICE</div>
+        </div>
+        <div class="card-content">
+
+          <c3chart bindto-id="chart3">
+            <chart-column column-id="x"
+                          column-values="Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Setiembre,Octubre,Noviembre,Diciembre"/>
+            <chart-column column-id="data1"
+                          column-name="Denuncias"
+                          column-color="red"
+                          column-values="30,200,100,400,150,250,450,378,236,189,38,278,378"
+                          column-type="line"/>
+            <chart-axes values-x="x" y="data1"/>
+
+            <chart-axis>
+              <chart-axis-x axis-position="outer-center"
+                            axis-label="ICE"
+                            axis-type="category">
+                <chart-axis-x-tick tick-rotate="50"/>
+              </chart-axis-x>
+              <chart-axis-y axis-id="y"
+                            axis-position="outer-right"
+                            axis-label="Numero de denuncias"
+                            padding-top="100"
+                            padding-bottom="0"
+                            range-min="0"/>
+          </c3chart>
+
+            <!--<c3chart bindto-id="chart5" show-labels="true" show-subchart="true" enable-zoom="true">-->
+                <!--<chart-column column-id="x"-->
+                              <!--column-values="Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Setiembre,Octubre,Noviembre,Diciembre"/>-->
+                <!--<chart-column column-id="data1"-->
+                              <!--column-name="Denuncias"-->
+                              <!--column-values="30,200,100,400,150,250,450,378,236,189,38,278,378"-->
+                              <!--column-type="line"/>-->
+                <!--<chart-colors color-pattern="{{color_pattern}}"/>-->
+                <!--&lt;!&ndash; values for y and y2 can be comma seperated list of items, so no commas is label &ndash;&gt;-->
+                <!--<chart-axes values-x="x" y="data1"/>-->
+
+                <!--<chart-axis>-->
+                    <!--<chart-axis-x axis-position="outer-center"-->
+                                  <!--axis-label="ICE"-->
+                                  <!--axis-type="category">-->
+                        <!--<chart-axis-x-tick tick-count="6"-->
+                                           <!--tick-culling="4"-->
+                                           <!--tick-fit="false"-->
+                                           <!--tick-rotate="50"/>-->
+                    <!--</chart-axis-x>-->
+                    <!--<chart-axis-y axis-id="y"-->
+                                  <!--axis-position="outer-right"-->
+                                  <!--axis-label="Numero de denuncias"-->
+                                  <!--padding-top="100"-->
+                                  <!--padding-bottom="0"-->
+                                  <!--range-min="0"/>-->
+                <!--</chart-axis>-->
+            <!--</c3chart>-->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
