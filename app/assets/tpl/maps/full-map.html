@@ -4,9 +4,10 @@
                       zoom="map.zoom"
                       control="map.control"
                       mark-click="true"
-                      ng-click="createMarker()">
+                      events="map.events">
 
-      <ui-gmap-markers models="markers" coords="'self'" icon="'icon'"></ui-gmap-markers>
+      <ui-gmap-markers  models="markers" coords="'self'" icon="'icon'" events="markersEvents" click="'onClicked'">
+      </ui-gmap-markers>
 
   </ui-gmap-google-map>
 
