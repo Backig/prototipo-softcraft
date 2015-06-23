@@ -1,4 +1,4 @@
-app.controller('ChartsController', ['$scope', '$interval', 'colorService', function($scope){
+app.controller('RegionController', ['$scope', '$interval', 'colorService', function($scope, $interval, colorService){
 
   $scope.canton = false;
   $scope.distrito = false;
