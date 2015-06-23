@@ -78,10 +78,7 @@ app.controller('FullMapController', ['$scope', '$rootScope','$aside', 'uiGmapIsR
 
   $scope.markersEvents = {
     click: function (gMarker, eventName, model) {
-      if(model.$id){
-        model = model.coords;//use scope portion then
-      }
-        alert("Model: event:" + eventName + " " + JSON.stringify(model));
+
         $scope.createItem();
     }
   };
