@@ -1,4 +1,4 @@
-app.controller('CrudController', ['$scope', '$window', '$aside', 'PlaceholderTextService', function($scope, $window, $aside, PlaceholderTextService){
+app.controller('CrudController', ['$scope', '$window', '$aside', 'PlaceholderTextService',function($scope, $window, $aside, PlaceholderTextService){
 
   // settings
   $scope.settings = {
@@ -9,11 +9,10 @@ app.controller('CrudController', ['$scope', '$window', '$aside', 'PlaceholderTex
 
   // adding demo data
   var data = [];
-  for (var i = 1; i <= 90; i++){
+  for (var i = 1; i <= 4; i++){
     data.push({
-      icon: PlaceholderTextService.createIcon(true),
-      firstname: PlaceholderTextService.createFirstname(),
-      lastname: PlaceholderTextService.createLastname(),
+      firstname: PlaceholderTextService.createFirstname(i),
+      lastname: PlaceholderTextService.createLastname(i),
       paragraph: PlaceholderTextService.createSentence()
     });
   }
@@ -22,7 +21,7 @@ app.controller('CrudController', ['$scope', '$window', '$aside', 'PlaceholderTex
   // defining template
   var formTpl = $aside({
     scope: $scope,
-    template: 'assets/tpl/apps/crud-form.html',
+    template: 'assets/tpl/apps/CrudUsuarios.html',
     show: false,
     placement: 'left',
     backdrop: false,
@@ -72,7 +71,8 @@ app.controller('CrudController', ['$scope', '$window', '$aside', 'PlaceholderTex
   };
 
   $scope.remove = function(item){
-    if(confirm('Are you sure?')){
+    eliminarUsuarios();
+    if(true){
       if(item){
         $scope.data.splice($scope.data.indexOf(item), 1);
       } else {
@@ -84,6 +84,16 @@ app.controller('CrudController', ['$scope', '$window', '$aside', 'PlaceholderTex
         $scope.selectAll = false;
       }
     }
+  };
+
+  eliminarUsuarios = function(){
+    sweetAlert({
+      title: "Oops!",
+      text: "Something went wrong on the page!",
+      type: "error"
+    });
+
+
   };
 
   showForm = function(){

@@ -7,12 +7,11 @@
 
         <h1>
             <i class="md md-camera"></i>
-            Crud application
+            Usuarios
         </h1>
         <p class="lead">
-            In most applications you need basic table listings and editing capabilities.
-            With this app you can create simple admin functionality based on a json web service.
-            <u>Exclusively on Materialism</u>.
+
+            <u></u>.
         </p>
     </div>
 </section>
@@ -21,23 +20,23 @@
 
 
     <div class="table-responsive well no-padding white no-margin">
-        <h3 class="table-title">{{data.length}} {{settings.plural}} available</h3>
+        <h3 class="table-title">{{data.length}} {{settings.plural}} Disponibles</h3>
 
         <table class="table table-full m-b-60" id="table-area-1" fsm-big-data="data of data take 30">
             <thead>
             <tr fsm-sticky-header scroll-body="'#table-area-1'" scroll-stop="64">
                 <th><input type="checkbox" class="relative" ng-model="selectAll" ng-click="checkAll()" /></th>
-                <th>Icon</th>
-                <th fsm-sort="firstname">Name</th>
-                <th fsm-sort="lastname">Last</th>
-                <th>Summary</th>
-                <th class="text-right">Actions</th>
+
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rol asignado</th>
+                <th class="text-right">Opciones</th>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="(key, item) in data" ng-click="item.selected=!item.selected"  ng-dblclick="editItem(item)">
                 <td><input type="checkbox" class="relative" ng-model="item.selected" ng-click="$event.stopPropagation()" /></td>
-                <td ng-bind-html="item.icon" class="f20"></td>
+
                 <td>{{ item.firstname }}</td>
                 <td>{{ item.lastname }}</td>
                 <td>{{ item.paragraph }}</td>

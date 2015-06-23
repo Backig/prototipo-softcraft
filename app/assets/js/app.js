@@ -1,6 +1,7 @@
 /*jslint strict: true */
 
-var app = angular.module('materialism', [
+var app;
+app = angular.module('materialism', [
   'app.constants',
 
   'ngRoute',
@@ -23,4 +24,5 @@ var app = angular.module('materialism', [
   'fsm',                    // sticky header
   'smoothScroll',
   'LocalStorageModule'
+
 ]);
